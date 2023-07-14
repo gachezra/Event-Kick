@@ -1,0 +1,207 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Concert at Serena Hotel</title>
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.2.0/css/all.css" integrity="sha384-hWVjflwFxL6sNzntih27bfxkr27PmbbK/iSvJ+a4+0owXq79v+lsFkW54bOGbiDQ"
+    crossorigin="anonymous">
+    <link href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="../css/1.css">
+    <link rel="stylesheet" href="../css/nav.css">
+    <link rel="shortcut icon" type="image/x-icon" href="../img/party.png">
+  </head>
+  <body>
+    <header>
+      <div class="nav-wrapper">
+        <a href="../index.html" class="nav-logo">
+          <img src="../img/logo.png" alt="EventKick Logo">
+        </a>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="../events.html">Events</a></li>
+            <li><a href="../about.html">About</a></li>
+            <li><a href="../contact.html">Contact Us</a></li>
+            <li><a href="../profile.html">Profile</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+    <main>
+      <div class="event-details">
+        <h1>Concert at Serena Hotel</h1>
+        <div class="event-description">
+          <img src="../img/event1.webp" alt="Concert at Serena Hotel">
+          <div class="list-event">
+            <ul class="event-details-list">
+              <li><strong>Date:</strong> January 20, 2024</li>
+              <li><strong>Time:</strong> 7:00 PM - 10:00 PM</li>
+              <li><strong>Category:</strong> Music</li>
+            </ul>
+            <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed malesuada lacus auctor, tempus velit non, vestibulum ipsum. Sed tincidunt aliquam ante, vel dictum elit bibendum ac. Donec aliquam consectetur mauris, id semper augue commodo vel.</p>
+          </div>
+        </div>
+      </div>
+      <div class="tickets">
+        <h1>Ticket Prices</h1>
+        <table>
+          <thead>
+            <tr>
+              <th></th>
+              <th>Number of Tickets</th>
+              <th>Price per Ticket</th>
+              <th>Total</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>Adult</td>
+              <td>
+                <select name="adult_tickets" id="adult_tickets">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>Ksh1000.00</td>
+              <td id="adult_total">Ksh0.00</td>
+            </tr>
+            <tr>
+              <td>Children</td>
+              <td>
+                <select name="child_tickets" id="child_tickets">
+                  <option value="0">0</option>
+                  <option value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                  <option value="4">4</option>
+                  <option value="5">5</option>
+                </select>
+              </td>
+              <td>Ksh500.00</td>
+              <td id="child_total">Ksh0.00</td>
+            </tr>
+            <tr class="totals">
+              <td>Total tickets</td>
+              <td id="total_tickets">0</td>
+              <td>Total</td>
+              <td id="total">Ksh0.00</td>
+            </tr>
+          </tbody>
+        </table>
+        <title>User Information Form</title>
+        <h1>User Information Form</h1>
+        <div class="container">
+          Enter your information
+          <form>
+            <input type="text" id="name" placeholder="Name" required>
+            <input type="tel" id="phone" placeholder="Phone" required>
+            <input type="email" id="email" placeholder="Email" required>
+          </form>
+            <div class="check">
+              <input type="checkbox" id="terms" name="terms" required>
+              I agree to the terms and conditions.
+            </div>
+            <button type="submit">Proceed to Pay</button>
+        </div>
+        <script>
+          const adult_tickets = document.getElementById('adult_tickets');
+          const child_tickets = document.getElementById('child_tickets');
+          const adult_total = document.getElementById('adult_total');
+          const child_total = document.getElementById('child_total');
+          const total = document.getElementById('total');
+
+          function updateTotals() {
+            const adult_price = 1000.00;
+            const child_price = 500.00;
+
+            const adult_count = parseInt(adult_tickets.value);
+            const child_count = parseInt(child_tickets.value);
+
+            const adult_subtotal = adult_count * adult_price;
+            const child_subtotal = child_count * child_price;
+            const total_tickets = adult_count + child_count;
+
+            adult_total.innerHTML = `Ksh${adult_subtotal.toFixed(2)}`;
+            child_total.innerHTML = `Ksh${child_subtotal.toFixed(2)}`;
+
+            const total_price = adult_subtotal + child_subtotal;
+            total.innerHTML = `Ksh${total_price.toFixed(2)}`;
+          }
+
+          adult_tickets.addEventListener('change', updateTotals);
+          child_tickets.addEventListener('change', updateTotals);
+          total_tickets.addEventListener('change', updateTotals);
+        </script>
+
+      </div>
+      <div class="location-section">
+        <h1>Location</h1>
+        <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d45127.42198214754!2d36.729054040498056!3d-1.3333496266642226!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x182f1b40e8700ce9%3A0xf4eb6d3689e5364b!2sThe%20Waterfront%20Karen!5e0!3m2!1sen!2sin!4v1680274588177!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+      </div>
+      <div class="comments-section">
+        <div class="share">
+          <h2>Share with Friends</h2>
+          <p>Share this event with your friends:</p>
+          <ul>
+            <a href="https://www.facebook.com/sharer/sharer.php?u=[insert page URL here]"><i class="fab fa-facebook fa-lg"></i></a>
+            <a href="https://www.instagram.com/[insert username here]"><i class="fab fa-instagram fa-lg"></i></a>
+            <a href="https://twitter.com/intent/tweet?url=[insert page URL here]"><i class="fab fa-twitter fa-lg"></i></a>
+            <a href="whatsapp://send?text=[insert page URL here]"><i class="fab fa-whatsapp fa-lg"></i></a>
+          </ul>
+        </div>
+        <div class="comments-list">
+          <h2>Comments</h2>
+          <div class="comment">
+            <p><strong>John Doe:</strong> This event was amazing!</p>
+          </div>
+          <div class="comment">
+            <p><strong>Jane Smith:</strong> I wish I could have been there!</p>
+          </div>
+        </div>    
+        <div class="comment-form-wrapper">
+          {% if user.is_authenticated %}
+          <form action="#" method="post">
+            {% csrf_token %}
+            <label for="comment">Leave a comment:</label>
+            <textarea name="comment" id="comment" rows="3"></textarea>
+            <button type="submit">Submit</button>
+          </form>
+          {% else %}
+          <p>Please <a href="#">log in</a> to leave a comment.</p>
+          {% endif %}
+        </div>
+      </div>
+    </main>
+  <footer>
+    <div class="top-footer">
+      <a href="../index.html" class="nav-logo">
+        <img src="../img/d-logo.png" alt="EventKick Logo">
+      </a>
+      <p>&copy; 2023 EventKick Kenya. ALL RIGHTS RESERVED</p>
+    </div>
+    <div class="lower-footer">
+      <ul class="socials">
+        STAY CONNECTED
+        <li><a href="https://www.facebook.com/people/EventKick-Kenya/100089531837941/" target="_blank" rel="noopener noreferrer">Facebook</a></li>
+        <li><a href="https://www.instagram.com/eventkick/" target="_blank" rel="noopener noreferrer">Instagram</a></li>
+        <li><a href="https://twitter.com/EventKick_Ke" target="_blank" rel="noopener noreferrer">Twitter</a></li>
+      </ul>
+      <div class="more">
+        MORE
+        <li><a href="../about.html">About Us</a></li>
+        <li><a href="../faq.html">FAQs</a></li>
+        <li><a href="../privacy-policy.html">Privacy Policy</a></li>
+      </div>
+      <div class="cont">
+        CONTACT US
+        <li>+254 727 684 727</li>
+        <li></li><a href="mailto:info@eventkick.com">info@eventkick.com</a></li>
+      </div>
+    </div>
+    <script href="js/session.js"></script>
+  </footer>
+</html>
