@@ -47,9 +47,8 @@ button.btn:hover{
   border-radius: 50%;
   width: 50px;
   opacity: 0.5;
-  position: relative;
+  position: absolute;
   top: 50%;
-  margin: 0;
 }
 .carousel{
     height: auto;
