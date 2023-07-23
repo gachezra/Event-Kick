@@ -41,6 +41,16 @@ button.btn:hover{
 .card{
     border-radius: 10px;
 }
+.carousel-control-prev,
+.carousel-control-next {
+  height: 50px;
+  border-radius: 50%;
+  width: 50px;
+  opacity: 0.5;
+  position: relative;
+  top: 50%;
+  margin: 0;
+}
 .carousel{
     height: auto;
     max-width: 70%;
@@ -51,3 +61,4 @@ button.btn:hover{
       max-width: 100%;
     }
   }
+  
