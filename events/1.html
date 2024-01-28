@@ -86,22 +86,37 @@
               </li>
             </ul>
           </div>
-          <h2>Comments</h2>
-        <div class="comment mb-2">
-          <p><strong>John Doe:</strong> This event was amazing!</p>
-        </div>
-        <div class="comment">
-          <p><strong>Jane Smith:</strong> I wish I could have been there!</p>
-        </div>
         </div>
       </div>
+      <!-- Map Section -->
       <h2 class="text-md-start">Location</h2>
       <div class="map-container">
         <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d4871.948056543911!2d39.73876746102266!3d-3.9843099039054444!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x184012c462c6fcb1%3A0x63962ae8042e179d!2sSeverin%20Sea%20Lodge!5e0!3m2!1sen!2ske!4v1690031025763!5m2!1sen!2ske" class="map-iframe" frameborder="0" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
-      </div>      
+      </div>
+      <!-- Comment Section-->
+      <h2>Comments</h2>
+      <div id="disqus_thread"></div>    
     </div>
-    
+    <script id="dsq-count-scr" src="//eventkick-com.disqus.com/count.js" async></script>
   </body>
+  <script>
+    /**
+    *  RECOMMENDED CONFIGURATION VARIABLES: EDIT AND UNCOMMENT THE SECTION BELOW TO INSERT DYNAMIC VALUES FROM YOUR PLATFORM OR CMS.
+    *  LEARN WHY DEFINING THESE VARIABLES IS IMPORTANT: https://disqus.com/admin/universalcode/#configuration-variables    */
+    /*
+    var disqus_config = function () {
+    this.page.url = PAGE_URL;  // Replace PAGE_URL with your page's canonical URL variable
+    this.page.identifier = PAGE_IDENTIFIER; // Replace PAGE_IDENTIFIER with your page's unique identifier variable
+    };
+    */
+    (function() { // DON'T EDIT BELOW THIS LINE
+    var d = document, s = d.createElement('script');
+    s.src = 'https://eventkick-com.disqus.com/embed.js';
+    s.setAttribute('data-timestamp', +new Date());
+    (d.head || d.body).appendChild(s);
+    })();
+</script>
+<noscript>Please enable JavaScript to view the <a href="https://disqus.com/?ref_noscript">comments powered by Disqus.</a></noscript
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/2.10.2/umd/popper.min.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/bootstrap/5.3.0/js/bootstrap.min.js"></script>
   <!--Footer-->
